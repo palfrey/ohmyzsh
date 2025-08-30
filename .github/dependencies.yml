@@ -20,6 +20,10 @@ dependencies:
     repo: jonmosco/kube-ps1
     branch: master
     version: f412a4bc807f733a18cdeca39eee906d82910302
+    precopy: |
+      set -e
+      rm -f kube-ps1.plugin.zsh
+      test -e kube-ps1.sh && mv kube-ps1.sh kube-ps1.plugin.zsh
   plugins/history-substring-search:
     repo: zsh-users/zsh-history-substring-search
     branch: master
